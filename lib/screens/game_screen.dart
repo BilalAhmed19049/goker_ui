@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goker/dynamic_widgets/bingo_widget.dart';
 import 'package:goker/dynamic_widgets/blur_image.dart';
@@ -103,15 +102,16 @@ bool isAnimationVisible=false;
     );
   }
 void handleDrawButton(){
-  Random random=Random();
-  int randomIndex=random.nextInt(75)+1;
-  setState(() {
- actualIndex=randomIndex-1;
-    String coloredImagePath=getColoredImagePaths(15,5)[actualIndex!];
-    imagePaths[actualIndex!]=coloredImagePath;
-    isColored[actualIndex!]=true;
-  });
-}
+  print('Draw button is working');
+    Random random = Random();
+    int randomIndex = random.nextInt(75) + 1;
+    setState(() {
+      actualIndex = randomIndex - 1;
+      String coloredImagePath = getColoredImagePaths(15, 5)[actualIndex!];
+      imagePaths[actualIndex!] = coloredImagePath;
+      isColored[actualIndex!] = true;
+    });
+  }
 
 
 
